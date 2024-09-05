@@ -3,34 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Tables</title>
+    <title>Class Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        h1, h3 {
+            text-align: center;
+            color: #333333; 
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            table-layout: fixed; 
+        }
+
+        th, td {
+            border: 1px solid #D3D3D3;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #6A8D92; 
+            color: white;
+            font-size: 14px;
+        }
+
+        td {
+            background-color: #F5F5F5; 
+            color: #333333; 
+            font-size: 13px;
+        }
+
+        td:first-child {
+            background-color: #A8A8A8; 
+            font-weight: bold;
+            width: 160px; 
+        }
+
+        th:not(:first-child), td:not(:first-child) {
+            width: calc((100% - 160px) / 5);
+        }
+
+        td[rowspan] {
+            font-weight: bold;
+            background-color: #BCCFB4; 
+        }
+
+        td.empty {
+            background-color: white; 
+        }
+
+        table tr:first-child th {
+            height: 50px; 
+        }
+
+    </style>
 </head>
 <body>
     <h1>CLASS SCHEDULE</h1>
     <h3>FIRST SEMESTER, AY 2024-2025</h3>
-    <table border="1px solid black">
+    <table>
         <tr>
-            <th>TIME</th>
-            <th>MONDAY</th>
-            <th>TUESDAY</th>
-            <th>WEDNESDAY</th>
-            <th>THURSDAY</th>
-            <th>FRIDAY</th>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
         </tr>
         <tr>
-            <td>7:00am-8:00am</td>
-            <td>Data 2</td>
-            <td>Data 3</td>
+            <td>7:00AM - 8:00AM</td>
+            <td rowspan="6"><b>IT 331</b><br>Lab 4</td>
+            <td rowspan="3"><b>IT 321</b><br>102</td>
+            <td class="empty" rowspan="22">&nbsp;</td>
+            <td rowspan="4"><b>GED 104</b><br>103</td>
+            <td class="empty" rowspan="8">&nbsp;</td>
         </tr>
         <tr>
-            <td>Data 4</td>
-            <td>Data 5</td>
-            <td>Data 6</td>
+            <td>7:30AM - 8:00AM</td>
         </tr>
         <tr>
-            <td>Data 7</td>
-            <td>Data 8</td>
-            <td>Data 9</td>
+            <td>8:00AM - 8:30AM</td>
+        </tr>
+        <tr>
+            <td>8:30AM - 9:00AM</td>
+            <td rowspan="3"><b>CS 311</b><br>402</td>
+        </tr>
+        <tr>
+            <td>9:00AM - 9:30AM</td>
+            <td class="empty" rowspan="8">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>9:30AM - 10:00AM</td>
+        </tr>
+        <tr>
+            <td>10:00AM - 10:30AM</td>
+            <td class="empty" rowspan="6">&nbsp;</td>
+            <td rowspan="6"><b>IT 314</b><br>Lab 3</td>
+        </tr>
+        <tr>
+            <td>10:30AM - 11:00AM</td>
+        </tr>
+        <tr>
+            <td>11:00AM - 11:30AM</td>
+            <td rowspan="4"><b>IT 314</b><br>103</td>
+        </tr>
+        <tr>
+            <td>11:30AM - 12:00PM</td>
+        </tr>
+        <tr>
+            <td>12:00PM - 12:30PM</td>
+        </tr>
+        <tr>
+            <td>12:30PM - 1:00PM</td>
+        </tr>
+        <tr>
+            <td>1:00PM - 1:30PM</td>
+            <td rowspan="3"><b>IT 314</b><br>103</td>
+            <td class="empty" rowspan="10">&nbsp;</td>
+            <td rowspan="3"><b>MATH 408</b><br>103</td>
+            <td rowspan="10"><b>CS 312</b><br>Lab 3</td>
+        </tr>
+        <tr>
+            <td>1:30PM - 2:00PM</td>
+        </tr>
+        <tr>
+            <td>2:00PM - 2:30PM</td>
+        </tr>
+        <tr>
+            <td>2:30PM - 3:00PM</td>
+            <td rowspan="3"><b>IT 321</b><br>103</td>
+            <td rowspan="3"><b>CS 311</b><br>103</td>
+        </tr>
+        <tr>
+            <td>3:00PM - 3:30PM</td>
+        </tr>
+        <tr>
+            <td>3:30PM - 4:00PM</td>
+        </tr>
+        <tr>
+            <td>4:00PM - 4:30PM</td>
+            <td class="empty" rowspan="4">&nbsp;</td>
+            <td rowspan="2"><b>GED 104</b><br>103</td>
+        </tr>
+        <tr>
+            <td>4:30PM - 5:00PM</td>
+        </tr>
+        <tr>
+            <td>5:00PM - 5:30PM</td>
+            <td class="empty" rowspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>5:30PM - 6:00PM</td>
         </tr>
     </table>
 </body>
